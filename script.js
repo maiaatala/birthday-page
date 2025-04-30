@@ -31,7 +31,7 @@ function checkAlignment() {
   console.log("Overlap?", isOverlapping);
 
   if (isOverlapping) {
-    //openSurprise();
+    openSurprise();
   }
 }
 
@@ -60,7 +60,7 @@ function openSurprise() {
       ></iframe>
     `;
     }
-  }, 1500);
+  }, 2000);
 }
 
 cssInput.addEventListener("input", () => {
