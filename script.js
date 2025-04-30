@@ -57,7 +57,7 @@ function openSurprise() {
         allowfullscreen
       ></iframe>
     `;
-      document.cookie = "bypass=true; path=/; max-age=3600";
+      document.cookie = "bypass=true; path=/; max-age=7200";
     }
   }, 3000);
 }
