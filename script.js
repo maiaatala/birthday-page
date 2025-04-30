@@ -40,7 +40,7 @@ function openSurprise() {
   document.getElementById("victory").style.display = "block";
   const sound = document.getElementById("victorySound");
   sound.currentTime = 3.1;
-  sound.volume = 0.6;
+  sound.volume = 0.5;
   sound.play().catch((err) => console.warn("Autoplay blocked:", err));
   const bypass = getCookie("bypass");
 
@@ -60,7 +60,7 @@ function openSurprise() {
       ></iframe>
     `;
     }
-  }, 2000);
+  }, 3000);
 }
 
 cssInput.addEventListener("input", () => {
