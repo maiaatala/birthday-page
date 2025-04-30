@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GABS GABS GABS GABS GABS</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <img id="victory" src="./assets/victory.png" />
+      <audio
+        id="victorySound"
+        src="./assets/success.mp3"
+        preload="auto"
+      ></audio>
+      <div id="editor">
+        <h2>🎈 Help shadow find the item!</h2>
+        <pre><code>/* Move with css! */</code></pre>
+        <button
+          id="skip-game-btn"
+          title="clicar no botao se css nao é para voce"
+          autofocus="true"
+        >
+          Pular para vitoria
+        </button>
+        <textarea
+          id="cssInput"
+          spellcheck="false"
+          placeholder="display:flex;&#10;justify-content: center;&#10;//continue..."
+        ></textarea>
+      </div>
+
+      <div id="preview">
+        <div id="box" class="playground">
+          <img id="sprite" src="./assets/shadow.png" />
+        </div>
+        <div class="background"></div>
+        <div id="treasure-container">
+          <div id="treasure" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

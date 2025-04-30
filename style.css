@@ -1,0 +1,130 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: monospace;
+  background: #fdf6f0;
+  color: #333;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+#victory {
+  display: none;
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 100000;
+}
+
+#editor {
+  flex: 1;
+  padding: 2rem;
+  background: #2d2d2d;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+#editor h2 {
+  margin-top: 0;
+  color: #ffdd57;
+}
+
+pre {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+textarea {
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  resize: none;
+  background: #1e1e1e;
+  color: #9cdcfe;
+  outline: none;
+}
+
+#preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffbe7;
+  position: relative;
+}
+
+#skip-game-btn {
+  position: absolute;
+  right: 50%;
+  top: 60px;
+  z-index: 10;
+  padding: 6px;
+  border: 1px solid #fffbe7;
+  border-radius: 4px;
+  background: transparent;
+  color: #fffbe7;
+  font-weight: 700;
+
+  &:hover {
+    background: #fffbe7;
+    color: #2d2d2d;
+  }
+}
+
+#box {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.background {
+  width: 90%;
+  height: 90%;
+  border: 3px dashed #f06292;
+  position: absolute;
+}
+
+#sprite {
+  width: 3rem;
+  transition: all 0.3s ease;
+  object-fit: contain;
+  height: fit-content;
+}
+
+#treasure-container {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  height: 62px;
+  width: 80px;
+}
+#treasure {
+  /*background: red;*/
+  height: 64px;
+  width: 80px;
+  background: transparent url("./assets/red_chest_sprite.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.treasure-open {
+  animation: run 1s steps(4) forwards;
+}
+
+@keyframes run {
+  100% {
+    background-position: -320px 0;
+  }
+}
