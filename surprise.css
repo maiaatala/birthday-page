@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background: #2e3440;
+  overflow: hidden;
+  position: relative;
+}
+
+body * {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.container * {
+  color: #ebcb8b;
+  background: transparent;
+}
+
+.controls {
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+  transform: translate(50%, 0);
+  z-index: 1000;
+}
+
+#playAudioBtn {
+  color: #eceff4;
+  background: black;
+  border: 1px solid #eceff4;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+
+  &:hover {
+    background: #eceff4;
+    color: black;
+  }
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: justify;
+}
+
+code {
+  padding: 0 10px;
+  background: #2e3440 !important;
+}
+
+#right {
+  text-align: right;
+  margin-bottom: 10rem;
+}
+
+#longBreak {
+  margin-bottom: 8rem;
+}
+
+#ascii {
+  white-space: pre;
+  font-family: monospace;
+}
+
+.container {
+  position: absolute;
+  margin: 0 auto;
+  z-index: 1;
+  inset: 0;
+  perspective: 380px;
+  perspective-origin: bottom;
+  overflow: visible;
+  transform: scaleY(0.9);
+
+  & .credits {
+    position: absolute;
+    top: 0;
+    left: 13%;
+    right: 13%;
+    height: 100%;
+    /*overflow: auto;*/
+    animation: play 90s forwards;
+    /*animation-timing-function: cubic-bezier(0.4, 0.6, 0.6, 0.4);*/
+    /*transform: rotateX(10deg) translate3d(0, 60rem, 0);*/
+  }
+
+  & .headings * {
+    text-align: center;
+  }
+  & .headings {
+    margin-bottom: 5rem;
+  }
+}
+
+@keyframes play {
+  0% {
+    transform: rotateX(10deg) translate3d(0, 65rem, 0);
+    opacity: 1;
+  }
+  50% {
+    /*transform: rotateX(10deg) translate3d(0, -100rem, 0);*/
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(10deg) translate3d(0, -190rem, 0);
+    opacity: 0;
+  }
+}
+
+.scrollable {
+  overflow: auto;
+  transform: rotateX(10deg);
+  animation: none !important;
+  pointer-events: auto;
+  max-height: none;
+}

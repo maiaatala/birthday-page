@@ -26,9 +26,6 @@ function checkAlignment() {
   const verticallyOverlapping = spriteRect.bottom > treasureRect.top;
 
   const isOverlapping = horizontallyOverlapping && verticallyOverlapping;
-  console.log("Sprite:", spriteRect);
-  console.log("Treasure:", treasureRect);
-  console.log("Overlap?", isOverlapping);
 
   if (isOverlapping) {
     openSurprise();
@@ -46,7 +43,8 @@ function openSurprise() {
 
   setTimeout(() => {
     if (bypass === "true") {
-      console.log("show surprise");
+      window.location.href = "/birthday-page/surprise";
+      //window.location.href = "surprise.html";
     } else {
       // Blow away the page and embed the autoplaying video
       document.body.innerHTML = `
@@ -59,6 +57,7 @@ function openSurprise() {
         allowfullscreen
       ></iframe>
     `;
+      document.cookie = "bypass=true; path=/; max-age=3600";
     }
   }, 3000);
 }
