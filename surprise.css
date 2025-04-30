@@ -114,14 +114,15 @@ code {
     opacity: 1;
   }
   100% {
-    transform: rotateX(10deg) translate3d(0, -190rem, 0);
+    transform: rotateX(10deg) translate3d(0, -165rem, 0);
     opacity: 0;
   }
 }
 
 .scrollable {
   overflow: auto;
-  transform: rotateX(10deg);
+  transform: rotateX(10deg) translate3d(0, -15rem, 0);
+  height: 120vh !important;
   animation: none !important;
   pointer-events: auto;
   max-height: none;
