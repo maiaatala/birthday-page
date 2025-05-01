@@ -48,14 +48,19 @@ function openSurprise() {
     } else {
       // Blow away the page and embed the autoplaying video
       document.body.innerHTML = `
-      <iframe
-        width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/2qBlE2-WL60?autoplay=1&mute=0&controls=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-      ></iframe>
+      <div
+      class="yt-embed-holder"
+      >
+        <iframe
+          id="frame"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/2qBlE2-WL60?autoplay=1&mute=0&controls=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
     `;
       document.cookie = "bypass=true; path=/; max-age=9000";
     }
